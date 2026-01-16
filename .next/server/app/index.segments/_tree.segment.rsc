@@ -1,0 +1,13 @@
+:HL["/_next/static/chunks/6e140cc2f979195d.css","style"]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=2400&q=90","image"]
+:HL["https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=800&q=80","image"]
+:HL["https://images.unsplash.com/photo-1574096079513-d8259312b785?w=800&q=80","image"]
+:HL["https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80","image"]
+:HL["https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80","image"]
+:HL["https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&q=80","image"]
+:HL["https://i.pravatar.cc/100?img=1","image"]
+:HL["https://i.pravatar.cc/100?img=2","image"]
+:HL["https://i.pravatar.cc/100?img=3","image"]
+0:{"buildId":"rE4T8JN9NrjKqZE31Tw51","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

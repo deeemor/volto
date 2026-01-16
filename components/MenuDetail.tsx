@@ -3,13 +3,7 @@
 
 import React, { useEffect } from 'react';
 import { X, ArrowLeft, Star, Clock } from 'lucide-react';
-
-interface MenuItem {
-  name: string;
-  price: string;
-  desc?: string;
-  tag?: string;
-}
+import { MenuItem } from '@/types';
 
 interface MenuDetailProps {
   category: string;

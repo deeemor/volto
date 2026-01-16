@@ -5,8 +5,18 @@ import React, { useState } from 'react';
 import { Utensils, Beer, Wind, Pizza, Martini, Sparkles, Coffee, ArrowRight } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { MenuDetail } from './MenuDetail';
+import { MenuItem } from '@/types';
 
-const CATEGORIES = [
+interface CategoryData {
+  id: string;
+  title: string;
+  desc: string;
+  image: string;
+  icon: React.ReactNode;
+  data: Record<string, MenuItem[]>;
+}
+
+const CATEGORIES: CategoryData[] = [
   { 
     id: 'speisen',
     title: 'Speisen', 

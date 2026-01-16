@@ -1,6 +1,13 @@
 
 import React from 'react';
 
+export interface MenuItem {
+  name: string;
+  price: string;
+  desc?: string;
+  tag?: string;
+}
+
 export interface MenuCardProps {
   title: string;
   description: string;
