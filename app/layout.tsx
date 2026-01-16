@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
-
+import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -30,6 +30,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${jakarta.variable} bg-stone-200 min-h-screen text-slate-900 font-inter antialiased`}>
         <SmoothScrolling>
           {children}
+          <Analytics/>
         </SmoothScrolling>
       </body>
     </html>
