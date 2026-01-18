@@ -31,7 +31,7 @@ export const MenuDetail: React.FC<MenuDetailProps> = ({ category, image, data, o
           className="w-full h-full object-cover scale-105 opacity-80" 
           alt={category} 
         />
-        <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-stone-950 via-stone-950/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-stone-950 via-stone-950/40 to-transparent pointer-events-none" />
         
         {/* Mobile Close Button (Top Left) */}
         <div className="absolute top-6 left-6 lg:hidden z-50">

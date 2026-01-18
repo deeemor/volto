@@ -61,14 +61,14 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none ${
           isScrolled ? 'py-4' : 'py-6'
         } ${isVisible ? 'translate-y-0' : '-translate-y-[150%]'}`}
       >
         <div 
           className={`
             relative rounded-full px-2 py-2 flex items-center justify-between gap-8 
-            transition-all duration-500 w-[95%] max-w-4xl
+            transition-all duration-500 w-[95%] max-w-4xl pointer-events-auto
             ${isScrolled 
               ? 'bg-black/50 backdrop-blur-xl backdrop-saturate-150 border border-white/10 shadow-xl shadow-black/10' 
               : 'bg-transparent backdrop-blur-none border border-transparent shadow-none'
@@ -123,7 +123,7 @@ export const Navbar: React.FC = () => {
             {/* Mobile Menu Button */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden w-11 h-11 flex items-center justify-center rounded-full bg-brand-dark text-brand-light shadow-lg active:scale-90 transition-all border border-brand-muted/50 z-[60] relative cursor-pointer pointer-events-auto"
+              className="md:hidden w-11 h-11 flex items-center justify-center rounded-full bg-brand-dark text-brand-light shadow-lg active:scale-90 transition-all border border-brand-muted/50 z-[60] relative cursor-pointer pointer-events-auto touch-manipulation"
             >
               {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -133,8 +133,8 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 z-[55] bg-brand-dark/98 backdrop-blur-[30px] transition-all duration-700 md:hidden flex flex-col justify-center items-center ${
-          isMobileMenuOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none translate-y-10'
+        className={`fixed inset-0 z-[55] bg-brand-dark/98 backdrop-blur-[30px] transition-all duration-700 md:hidden flex flex-col justify-center items-center pointer-events-auto ${
+          isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-10'
         }`}
       >
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">

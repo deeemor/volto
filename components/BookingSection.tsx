@@ -6,7 +6,7 @@ import { Reveal } from './Reveal';
 export const BookingSection: React.FC = () => {
   return (
     <section id="booking-section" className="bg-brand-dark py-32 px-6 md:px-20 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-DEFAULT/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/3" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-DEFAULT/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
         <div className="lg:col-span-5">

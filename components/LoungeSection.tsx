@@ -58,10 +58,10 @@ export const LoungeSection: React.FC = () => {
             alt="Interior Design" 
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent pointer-events-none"></div>
           
           {/* Floating Stats Card */}
-          <div className="absolute bottom-10 right-10 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-3xl max-w-xs text-white">
+          <div className="absolute bottom-10 right-10 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-3xl max-w-xs text-white pointer-events-none">
             <div className="flex items-center gap-2 mb-2">
                <div className="flex -space-x-2">
                   <img className="w-8 h-8 rounded-full border-2 border-stone-900" src="https://i.pravatar.cc/100?img=1" alt="Avatar" />

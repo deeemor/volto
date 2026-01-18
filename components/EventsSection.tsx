@@ -112,7 +112,7 @@ const EventCard = ({
 export const EventsSection: React.FC = () => {
   return (
     <section className="relative py-24 bg-stone-950" id="events-section">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-dark/50 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-dark/50 to-transparent pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6 md:gap-8">

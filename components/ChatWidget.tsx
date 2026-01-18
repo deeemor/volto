@@ -59,9 +59,9 @@ export const ChatWidget: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 z-[100] flex flex-col items-end">
+    <div className="fixed bottom-8 right-8 z-[100] flex flex-col items-end pointer-events-none">
       <div 
-        className={`bg-stone-950 border border-white/10 rounded-[2.5rem] shadow-2xl w-[380px] mb-6 overflow-hidden transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] origin-bottom-right ${
+        className={`bg-stone-950 border border-white/10 rounded-[2.5rem] shadow-2xl w-[380px] mb-6 overflow-hidden transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] origin-bottom-right pointer-events-auto touch-manipulation ${
           isOpen ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-12 opacity-0 scale-90 pointer-events-none'
         }`}
       >
@@ -133,7 +133,7 @@ export const ChatWidget: React.FC = () => {
 
       <button 
         onClick={() => setIsOpen(!isOpen)} 
-        className="w-16 h-16 bg-white text-stone-950 rounded-[2rem] shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-500 relative group"
+        className="w-16 h-16 bg-white text-stone-950 rounded-[2rem] shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-500 relative group pointer-events-auto touch-manipulation"
       >
         <div className="absolute inset-0 bg-white/20 rounded-[2rem] animate-ping group-hover:animate-none -z-10" />
         {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
