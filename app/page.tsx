@@ -4,7 +4,7 @@ import { Hero } from '@/components/Hero';
 import { MenuSection } from '@/components/MenuSection';
 import { Atmosphere } from '@/components/Atmosphere';
 import { LoungeSection } from '@/components/LoungeSection';
-import { Events } from '@/components/Events';
+import { EventsSection } from '@/components/EventsSection';
 import { BookingSection } from '@/components/BookingSection';
 import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
@@ -21,7 +21,7 @@ export default function Home() {
         <MenuSection />
         <Atmosphere />
         <LoungeSection />
-        <Events />
+        <EventsSection />
         <BookingSection />
         <CTASection />
       </main>

@@ -3,9 +3,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Bot, MessageCircle } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
-
-const ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY });
 
 interface Message {
   role: 'assistant' | 'user';
@@ -36,29 +33,22 @@ export const ChatWidget: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: [...messages, { role: 'user', text: userMsg }].map(m => ({
-          parts: [{ text: m.text }],
-          role: m.role === 'assistant' ? 'model' : 'user'
-        })),
-        config: {
-          systemInstruction: `You are the premium AI Concierge for 'Volto Larva', a high-end Bar & Lounge in Dortmund.
-          
-          PRICES & DATA:
-          - Burger: Cheeseburger (15.90€), Avocado-Burger (17.90€). Includes fries.
-          - Pizza: Margherita (11.90€), Diavolo (14.90€), Hollandaise (15.90€).
-          - Shisha: All Standard (16.90€), Volto Special (29.90€).
-          - Cocktails: Classic/Exotic (11.80€-12.80€), Volto Spezial Cocktail (22.80€).
-          - Happy Hour: 14:00-18:00 (Mocktails 50% cheaper).
-          - Hours: Fri-Sat until 4 AM.
-          
-          TONE: Elegant, professional, and slightly exclusive.
-          GOAL: Answer questions precisely. If they want to book, push them to the WhatsApp button.`,
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({
+          messages: [...messages, { role: 'user', text: userMsg }],
+        }),
       });
 
-      const aiText = response.text || "Ich konnte keine Antwort finden. Bitte kontaktieren Sie uns per WhatsApp.";
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      const aiText = data.text || "Ich konnte keine Antwort finden. Bitte kontaktieren Sie uns per WhatsApp.";
       setMessages(prev => [...prev, { role: 'assistant', text: aiText }]);
     } catch (error) {
       console.error(error);

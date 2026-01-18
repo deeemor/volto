@@ -22,7 +22,7 @@ export const LoungeSection: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         <Reveal>
-          <span className="text-purple-400 font-bold tracking-widest text-xs uppercase mb-4 block">Shisha Lounge & Bar</span>
+          <span className="text-amber-500 font-bold tracking-widest text-xs uppercase mb-4 block">Shisha Lounge & Bar</span>
           <h2 className="text-4xl lg:text-5xl font-medium text-white font-jakarta tracking-tight mb-6">
             Der Place-to-be <br /> <span className="text-stone-500">am Wochenende.</span>
           </h2>
@@ -35,19 +35,19 @@ export const LoungeSection: React.FC = () => {
               icon={<Clock size={20} />} 
               title="Lange Öffnungszeiten" 
               description="Freitag & Samstag bis 04:00 Uhr morgens." 
-              iconColorClass="text-purple-400"
+              iconColorClass="text-amber-500"
             />
             <FeatureItem 
               icon={<Fan size={20} />} 
               title="Top Belüftung" 
               description="Modernste Anlage für angenehme Luftqualität, auch bei vollem Haus." 
-              iconColorClass="text-green-400"
+              iconColorClass="text-white"
             />
             <FeatureItem 
               icon={<Tv size={20} />} 
               title="Live Sports" 
               description="Alle wichtigen Spiele live auf mehreren HD-Screens." 
-              iconColorClass="text-blue-400"
+              iconColorClass="text-brand-light"
             />
           </div>
         </Reveal>

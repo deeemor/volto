@@ -16,6 +16,27 @@ const config: Config = {
       colors: {
         stone: {
           950: '#0c0a09',
+        },
+        // Luxury Dining Palette
+        gold: {
+          50: '#FBF8F3',
+          100: '#F5EFE5',
+          200: '#EADBC2',
+          300: '#DEC29A',
+          400: '#D2A873',
+          500: '#C68E4D', // Primary Gold
+          600: '#A47239',
+          700: '#82592D',
+          800: '#634424',
+          900: '#46301B',
+        },
+        brand: {
+          light: '#F5EFE5',   // Soft Cream/Off-white
+          DEFAULT: '#C68E4D', // Rich Gold
+          dark: '#0f0f0f',    // Deep Black (softer than #000)
+          accent: '#D2A873',  // Light Gold
+          deep: '#1C1917',    // Dark Charcoal/Stone
+          muted: '#82592D',   // Muted Bronze
         }
       },
       animation: {
