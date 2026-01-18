@@ -30,6 +30,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${jakarta.variable} bg-stone-200 min-h-screen text-slate-900 font-inter antialiased`}>
         <SmoothScrolling>
           {children}
+          
           <Analytics/>
         </SmoothScrolling>
       </body>
